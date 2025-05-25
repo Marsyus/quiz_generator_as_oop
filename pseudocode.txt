@@ -1,0 +1,14 @@
+Convert quiz_creator.py into OOP
+    Create a question class
+    Create a function that asks user input to generate a question
+    Create a function that writes the question in a text file
+    Create a function that asks user to continue or not
+    Call the functions to run the program
+
+Convert quiz_taker.py into OOP
+    Create a function that reads a text file that contains questions generated from the OOP converted 'quiz_creator.py'
+    Create a function that randomizes the questions
+    Create a function that welcomes the user to start and how many items to quiz
+    Create a scoring system
+    Call the functions to run the program
+    
