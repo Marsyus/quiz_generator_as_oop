@@ -25,6 +25,9 @@ class NewQuestion(Question):
             else:
                 print("Invalid input. Please try again.")
 
+    def compile_choices(self):
+        self.choices = [self.choice_a, self.choice_b, self.choice_c, self.choice_d]    
+    
 #Create a function that writes the question in a text file
 #Create a function that asks user to continue or not
 #Call the functions to run the program
