@@ -1,4 +1,5 @@
 #Import the question class
+from question_class import Question
 #Create a function that asks user input to generate a question
 #Create a function that writes the question in a text file
 #Create a function that asks user to continue or not
