@@ -28,6 +28,13 @@ class NewQuestion(Question):
     def compile_choices(self):
         self.choices = [self.choice_a, self.choice_b, self.choice_c, self.choice_d]    
     
-#Create a function that writes the question in a text file
+    #Create a function that writes the question in a text file
+    def make_file(self, filename="quiz.txt"):
+        with open(filename, "a") as file:
+            file.write(f"{self.question}\n")
+            for choice in self.choices:
+                file.write(f"{choice}\n")
+            file.write(f"{self.answer}\n")
+            
 #Create a function that asks user to continue or not
 #Call the functions to run the program
