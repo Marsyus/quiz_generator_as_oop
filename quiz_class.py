@@ -34,7 +34,7 @@ class Quiz:
             if random_num not in random_order:
                 random_order.append(random_num)
                 if len(random_order) == count:
-                    break
+                    return random_order
 
     def generate_quiz(self, number, order):
         item = order[number]
