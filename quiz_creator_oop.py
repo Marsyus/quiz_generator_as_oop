@@ -1,6 +1,7 @@
 #Import the question class
 from question_class import Question
 
+#Inherit the Question class
 class NewQuestion(Question):
     ...
 

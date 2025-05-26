@@ -18,6 +18,7 @@ class Question:
             else:
                 print("Invalid input. Please try again.")
 
+    #Compile the four choices into a single list of choices
     def compile_choices(self):
         self.choices = [self.choice_a, self.choice_b, self.choice_c, self.choice_d]    
     
