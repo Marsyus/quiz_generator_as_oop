@@ -64,3 +64,11 @@ class Quiz:
                     print("\nInvalid input. Please try again.\n")
             except:
                 print("\nInvalid input. Please try again.\n")
+
+    def score(self, points, max_points):
+        if points == max_points:
+            return "Congrats! You perfectly passed the quiz!"
+        elif max_points > points >= max_points / 2:
+            return "Congrats! You passed the quiz!"
+        elif max_points / 2 > points >= 0:
+            return "You did not pass the quiz. Better luck next time!"
