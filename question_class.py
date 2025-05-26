@@ -10,7 +10,7 @@ class Question:
         self.choice_d += input(f"Enter choice for letter d: ")
         self.valid_choices = ["a", "b", "c", "d"]
     #Create a function that asks user input to generate a question
-    def make_question(self):
+    def answer_question(self):
         while True:
             ans = input("Choose a correct answer [a/b/c/d]: ").lower()
             if ans in self.valid_choices:

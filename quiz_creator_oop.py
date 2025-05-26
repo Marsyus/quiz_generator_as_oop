@@ -19,7 +19,7 @@ def ask_continue():
 #Call the functions to run the program
 while True:
     question = NewQuestion()
-    question.make_question()
+    question.answer_question()
     question.compile_choices()
     question.make_file()
     if ask_continue():
