@@ -16,10 +16,10 @@ class NewQuestion(Question):
         self.choice_b += input(f"Enter choice for letter b: ")
         self.choice_c += input(f"Enter choice for letter c: ")
         self.choice_d += input(f"Enter choice for letter d: ")
-        self.choices = ["a", "b", "c", "d"]
+        self.valid_choices = ["a", "b", "c", "d"]
         while True:
             ans = input("Choose a correct answer [a/b/c/d]: ").lower()
-            if ans in self.choices:
+            if ans in self.valid_choices:
                 self.answer = "Answer: " + ans
                 break
             else:
@@ -57,4 +57,3 @@ while True:
         continue
     else:
         break
-    
