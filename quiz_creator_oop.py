@@ -37,4 +37,14 @@ class NewQuestion(Question):
             file.write(f"{self.answer}\n")
             
 #Create a function that asks user to continue or not
+def ask_continue():
+    while True:
+        ans = input("Would you like to continue? [Y/N]: ").upper()
+        if ans == "Y":
+            return True
+        elif ans == "N":
+            return False
+        else:
+            print("Invalid input. Please try again.")
+
 #Call the functions to run the program
