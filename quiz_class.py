@@ -26,9 +26,9 @@ class Quiz:
             elif line.startswith("Answer"):
                 self.correct_answers.append(line.removeprefix("Answer: "))
 
-    def randomize_order(self):
+    def randomize_order(self, count):
         random_order = []
-        count = len(self.questions)
+        self.count = len(self.questions)
         while True:
             random_num = random.randint(0, count - 1)
             if random_num not in random_order:
@@ -57,8 +57,8 @@ class Quiz:
     def start_quiz(self):
         while True:
             try:
-                num = int(input(f"There are {count} questions available. How many would you like to answer? : "))
-                if count >= num >= 0:
+                num = int(input(f"There are {self.count} questions available. How many would you like to answer? : "))
+                if self.count >= num >= 0:
                     return num
                 else:
                     print("\nInvalid input. Please try again.\n")
