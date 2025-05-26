@@ -24,3 +24,13 @@ class Quiz:
                     each_choices = []
             elif line.startswith("Answer"):
                 correct_answers.append(line.removeprefix("Answer: "))
+
+    def randomize_order(self):
+        random_order = []
+        while True:
+            random_num = random.randint(0, count - 1)
+            if random_num not in random_order:
+                random_order.append(random_num)
+                if len(random_order) == count:
+                    break
+                
