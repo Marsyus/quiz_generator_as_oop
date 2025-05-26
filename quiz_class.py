@@ -28,6 +28,7 @@ class Quiz:
 
     def randomize_order(self):
         random_order = []
+        count = len(self.questions)
         while True:
             random_num = random.randint(0, count - 1)
             if random_num not in random_order:
