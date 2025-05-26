@@ -26,9 +26,10 @@ class Quiz:
             elif line.startswith("Answer"):
                 self.correct_answers.append(line.removeprefix("Answer: "))
 
+        self.count = len(self.questions)
+
     def randomize_order(self, count):
         random_order = []
-        self.count = len(self.questions)
         while True:
             random_num = random.randint(0, count - 1)
             if random_num not in random_order:
