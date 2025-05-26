@@ -3,15 +3,15 @@ import random
 class Quiz:
     def __init__(self, filename):
         self.filename = filename
-
+        self.questions = []
+        self.choices = []
+        self.correct_answers = []
+    
     def read_file(self):
         with open(self.filename, "r") as file:
             contents = file.readlines()
         
-        questions = []
-        choices = []
         each_choices = []
-        correct_answers = []
         valid = ("a", "b", "c", "d")
 
         for line in contents:
