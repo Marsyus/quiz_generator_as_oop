@@ -17,14 +17,14 @@ class Quiz:
         for line in contents:
             line = line.strip()
             if line.startswith("Question"):
-                questions.append(line.removeprefix("Question: "))
+                self.questions.append(line.removeprefix("Question: "))
             elif line.startswith(valid):
                 each_choices.append(line)
                 if len(each_choices) == 4:
-                    choices.append(each_choices)
+                    self.choices.append(each_choices)
                     each_choices = []
             elif line.startswith("Answer"):
-                correct_answers.append(line.removeprefix("Answer: "))
+                self.correct_answers.append(line.removeprefix("Answer: "))
 
     def randomize_order(self):
         random_order = []
