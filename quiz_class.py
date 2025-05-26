@@ -1,3 +1,4 @@
+import random
 #Quiz Class
 class Quiz:
     def __init__(self, filename):
@@ -33,4 +34,3 @@ class Quiz:
                 random_order.append(random_num)
                 if len(random_order) == count:
                     break
-                
