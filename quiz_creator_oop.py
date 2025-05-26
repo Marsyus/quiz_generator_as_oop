@@ -1,10 +1,6 @@
 #Import the question class
 from question_class import Question
 
-#Inherit the Question class
-class NewQuestion(Question):
-    ...
-
 #Create a function that asks user to continue or not
 def ask_continue():
     while True:
@@ -18,7 +14,7 @@ def ask_continue():
 
 #Call the functions to run the program
 while True:
-    question = NewQuestion()
+    question = Question()
     question.answer_question()
     question.compile_choices()
     question.make_file()
