@@ -1,7 +1,6 @@
 #Question Class
 class Question:
-    #Create a function that asks user input to generate a question
-    def make_question(self):
+    def __init__(self):
         self.question = "Question: "
         self.question += input(f"Enter your question: ")
         self.choice_a, self.choice_b, self.choice_c, self.choice_d = "a.) ", "b.) ", "c.) ", "d.) "
@@ -10,6 +9,8 @@ class Question:
         self.choice_c += input(f"Enter choice for letter c: ")
         self.choice_d += input(f"Enter choice for letter d: ")
         self.valid_choices = ["a", "b", "c", "d"]
+    #Create a function that asks user input to generate a question
+    def make_question(self):
         while True:
             ans = input("Choose a correct answer [a/b/c/d]: ").lower()
             if ans in self.valid_choices:
