@@ -53,3 +53,14 @@ class Quiz:
                     return 0
             else:
                 print("\nInvalid input. Please try again.")
+
+    def start_quiz(self):
+        while True:
+            try:
+                num = int(input(f"There are {count} questions available. How many would you like to answer? : "))
+                if count >= num >= 0:
+                    return num
+                else:
+                    print("\nInvalid input. Please try again.\n")
+            except:
+                print("\nInvalid input. Please try again.\n")
