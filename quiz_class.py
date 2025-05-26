@@ -1,12 +1,14 @@
 import random
 #Quiz Class
 class Quiz:
+    #Initialiizing constructor
     def __init__(self, filename):
         self.filename = filename
         self.questions = []
         self.choices = []
         self.correct_answers = []
     
+    #Reads the file
     def read_file(self):
         with open(self.filename, "r") as file:
             contents = file.readlines()
@@ -28,6 +30,7 @@ class Quiz:
 
         self.count = len(self.questions)
 
+    #Randomizes the order of the questions
     def randomize_order(self, count):
         random_order = []
         while True:
@@ -37,6 +40,7 @@ class Quiz:
                 if len(random_order) == count:
                     return random_order
 
+    #Displays the questions
     def generate_quiz(self, number, order):
         item = order[number]
         print(f"{number + 1}. {self.questions[item]}")
@@ -55,6 +59,7 @@ class Quiz:
             else:
                 print("\nInvalid input. Please try again.")
 
+    #Initiates the quiz
     def start_quiz(self):
         while True:
             try:
@@ -66,6 +71,7 @@ class Quiz:
             except:
                 print("\nInvalid input. Please try again.\n")
 
+    #Determines the score
     def score(self, points, max_points):
         if points == max_points:
             return "Congrats! You perfectly passed the quiz!"
@@ -74,6 +80,7 @@ class Quiz:
         elif max_points / 2 > points >= 0:
             return "You did not pass the quiz. Better luck next time!"
 
+    #Main run loop of the program
     def run(self):
         self.read_file()
         question_count = self.start_quiz()
