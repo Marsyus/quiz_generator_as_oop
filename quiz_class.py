@@ -35,3 +35,21 @@ class Quiz:
                 random_order.append(random_num)
                 if len(random_order) == count:
                     break
+
+    def generate_quiz(self, number, order):
+        item = order[number]
+        print(f"{number + 1}. {self.question[item]}")
+        for each in self.choice[item]:
+            print("  " + each)
+        while True:
+            valid_choices = ("a", "b", "c", "d")
+            user_ans = input("\nEnter your answer [a/b/c/d]: ")
+            if user_ans in valid_choices:
+                if user_ans == self.correct_answers[item]:
+                    print("\nYou are correct!")
+                    return 1
+                else:
+                    print("\nSorry, you are incorrect!")
+                    return 0
+            else:
+                print("\nInvalid input. Please try again.")
