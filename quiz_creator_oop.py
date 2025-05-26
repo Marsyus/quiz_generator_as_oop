@@ -48,3 +48,13 @@ def ask_continue():
             print("Invalid input. Please try again.")
 
 #Call the functions to run the program
+while True:
+    question = NewQuestion()
+    question.make_question()
+    question.compile_choices()
+    question.make_file()
+    if ask_continue():
+        continue
+    else:
+        break
+    
