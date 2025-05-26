@@ -38,8 +38,8 @@ class Quiz:
 
     def generate_quiz(self, number, order):
         item = order[number]
-        print(f"{number + 1}. {self.question[item]}")
-        for each in self.choice[item]:
+        print(f"{number + 1}. {self.questions[item]}")
+        for each in self.choices[item]:
             print("  " + each)
         while True:
             valid_choices = ("a", "b", "c", "d")
