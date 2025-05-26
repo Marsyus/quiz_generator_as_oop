@@ -2,3 +2,25 @@
 class Quiz:
     def __init__(self, filename):
         self.filename = filename
+
+    def read_file(self):
+        with open(self.filename, "r") as file:
+            contents = file.readlines()
+        
+        questions = []
+        choices = []
+        each_choices = []
+        correct_answers = []
+        valid = ("a", "b", "c", "d")
+
+        for line in contents:
+            line = line.strip()
+            if line.startswith("Question"):
+                questions.append(line.removeprefix("Question: "))
+            elif line.startswith(valid):
+                each_choices.append(line)
+                if len(each_choices) == 4:
+                    choices.append(each_choices)
+                    each_choices = []
+            elif line.startswith("Answer"):
+                correct_answers.append(line.removeprefix("Answer: "))
