@@ -80,7 +80,7 @@ class Quiz:
         score = 0
         for num in range(question_count):
             print("\n===========")
-            print(f"Score: {points}/{question_count}")
+            print(f"Score: {score}/{question_count}")
             print("===========\n")
-            points += self.generate_quiz(num, order)
-            
+            score += self.generate_quiz(num, order)
+        print(f"You scored {score}/{question_count}", self.score(score, question_count))
