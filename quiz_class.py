@@ -72,3 +72,15 @@ class Quiz:
             return "Congrats! You passed the quiz!"
         elif max_points / 2 > points >= 0:
             return "You did not pass the quiz. Better luck next time!"
+
+    def run(self):
+        self.read_file()
+        question_count = self.start_quiz()
+        order = self.randomize_order(self.count)
+        score = 0
+        for num in range(question_count):
+            print("\n===========")
+            print(f"Score: {points}/{question_count}")
+            print("===========\n")
+            points += self.generate_quiz(num, order)
+            
